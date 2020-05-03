@@ -3,7 +3,6 @@ body {
   margin: 0;
   width: 100vw;
   height: 100vh;
-  overflow-y: hidden;
   background-color: #e3e3e3;
   font-family: 'Italianno', cursive;
   display: -webkit-box;
@@ -59,6 +58,16 @@ body header .mobile-menu {
   display: none;
 }
 
+body .contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
 body .contact-form .input {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -69,5 +78,42 @@ body .contact-form .input {
           flex-direction: column;
   -ms-flex-preferred-size: 100%;
       flex-basis: 100%;
+}
+
+body .contact-form > div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 600px;
+          flex: 1 0 600px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .contact-form > div .description {
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
+}
+
+body .contact-form > div .map {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+body .contact-form > form {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 /*# sourceMappingURL=contact-form.css.map */

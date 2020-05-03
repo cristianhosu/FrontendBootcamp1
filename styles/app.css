@@ -46,9 +46,8 @@ body .container .mobile-menu {
 
 body .container .heading {
   -ms-grid-row: 2;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-area: title;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
   font-size: 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -64,10 +63,6 @@ body .container > .section1-background {
 }
 
 body .container > .section1-image {
-  -ms-grid-row: 3;
-  -ms-grid-row-span: 3;
-  -ms-grid-column: 1;
-  grid-area: section1_image;
   height: 100%;
   z-index: 2;
 }
@@ -88,7 +83,10 @@ body .container > .section1-text {
 
 body .container > .section2-background {
   grid-row: content2/span 3;
-  grid-column: 1/-1;
+  -ms-grid-row: 6;
+  -ms-grid-row-span: 3;
+  grid-row: 6 / 9;
+  grid-column: 1 / -1;
   background-color: #d6d6d6;
 }
 

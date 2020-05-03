@@ -38,7 +38,8 @@ body {
 		}
 
 		.heading {
-			grid-area: title;
+			// grid-area: title;
+			grid-row: 2/3;
 			font-size: 2.5rem;
 			display: flex;
 			place-self: center;
@@ -52,7 +53,7 @@ body {
 		}
 
 		> .section1-image {
-			grid-area: section1_image;
+			//grid-area: section1_image;
 			height: 100%;
 			z-index: 2;
 			> img {
@@ -70,7 +71,8 @@ body {
 
 		> .section2-background {
 			grid-row: content2/span 3;
-			grid-column: 1/-1;
+			grid-row: 6 / 9;
+			grid-column: 1 / -1;
 			background-color: #d6d6d6;
 		}
 
