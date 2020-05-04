@@ -25,58 +25,45 @@
 			</header>
 			<div class="heading">
 				<span>Menu</span>
+				<button class="btn flat" id="addPizza">+</button>
 			</div>
-			<div class="pizza-menu">
-				<div class="menu-item">
-					<img src="assets/Rectangle 38.png" />
-					<div class="name">
-						Pizza 1
-					</div>
-					<div class="description">Some random ingredients on top of mozzarella. Very minimal. Very nice!</div>
-					<div class="price">20 RON</div>
-				</div>
-				<div class="menu-item">
-					<img src="assets/Rectangle 38.png" />
-					<div class="name">
-						Pizza 2
-					</div>
-					<div class="description">Some random ingredients on top of mozzarella. Very minimal. Very nice!</div>
-					<div class="price">20 RON</div>
-				</div>
-				<div class="menu-item">
-					<img src="assets/Rectangle 38.png" />
-					<div class="name">
-						Pizza 3
-					</div>
-					<div class="description">Some random ingredients on top of mozzarella. Very minimal. Very nice!</div>
-					<div class="price">20 RON</div>
-				</div>
-				<div class="menu-item">
-					<img src="assets/Rectangle 38.png" />
-					<div class="name">
-						Pizza 4
-					</div>
-					<div class="description">Some random ingredients on top of mozzarella. Very minimal. Very nice!</div>
-					<div class="price">20 RON</div>
-				</div>
-				<div class="menu-item">
-					<img src="assets/Rectangle 38.png" />
-					<div class="name">
-						Pizza 5
-					</div>
-					<div class="description">Some random ingredients on top of mozzarella. Very minimal. Very nice!</div>
-					<div class="price">20 RON</div>
-				</div>
-				<div class="menu-item">
-					<img src="assets/Rectangle 38.png" />
-					<div class="name">
-						Pizza 6
-					</div>
-					<div class="description">Some random ingredients on top of mozzarella. Very minimal. Very nice!</div>
-					<div class="price"><a href="pizza-builder.html">Do it ></a></div>
-				</div>
-			</div>
+			<div class="pizza-menu"></div>
 		</main>
+
+		<div class="dialog hidden" id="addPizzaDialog">
+			<div class="title">
+				Add new Pizza
+			</div>
+			<div class="body">
+				<div class="field">
+					<label for="name">Name</label>
+					<input type="text" name="name" />
+				</div>
+				<div class="field">
+					<label for="description">Description</label>
+					<input type="text" name="description" />
+				</div>
+				<div class="field">
+					<label for="price">Price</label>
+					<input type="text" name="price" />
+				</div>
+			</div>
+			<div class="actions">
+				<button class="btn flat" name="cancel">Cancel</button>
+				<button class="btn green" name="save">Save</button>
+			</div>
+		</div>
+
+		<script type="text/template">
+			<div class="menu-item">
+				<img src="assets/Rectangle 38.png" />
+				<div class="name">
+					{{ name }}
+				</div>
+				<div class="description">{{ description }}</div>
+				<div class="price">{{ price }} RON</div>
+			</div>
+		</script>
 	</body>
 
 	<script src="./scripts/pizza-menu.js" type="module"></script>

@@ -61,6 +61,89 @@ body {
 			}
 		}
 	}
+
+	.dialog {
+		position: absolute;
+		top: 0;
+		left: 0;
+		transition: left 0.5s ease-in-out;
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(0, 0, 0, 0.4);
+
+		&.hidden {
+			position: relative;
+			left: -100vw;
+		}
+
+		.title {
+			background-color: #282828;
+			color: #ececec;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			padding: 20px 0 20px 20px;
+			font-size: 2rem;
+			line-height: 2.5rem;
+		}
+
+		.body {
+			background-color: #cdcdcd;
+			color: #2a2a2a;
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: center;
+			padding: 20px;
+			font-size: 2rem;
+			line-height: 2.5rem;
+
+			.field {
+				display: flex;
+				flex-direction: column;
+
+				label {
+					line-height: 1.5rem;
+					font-size: 1.3rem;
+				}
+				input {
+					line-height: 1.5rem;
+					font-size: 1.3rem;
+					padding: 5px 10px 5px 10px;
+					background-color: none;
+					border-radius: 6px;
+				}
+			}
+		}
+
+		.actions {
+			background-color: #282828;
+			font-size: 1.7rem;
+			line-height: 2rem;
+			padding: 10px;
+			display: flex;
+			flex-direction: row-reverse;
+		}
+	}
+
+	button {
+		background-color: none;
+		border: none;
+		font-size: 1rem;
+		padding: 5px 20px;
+		border-radius: 4px;
+		font: inherit;
+		margin: 0 20px;
+		cursor: pointer;
+
+		&.green {
+			background-color: #2aaa2a;
+		}
+
+		&.flat {
+			background-color: #dcdcdc;
+		}
+	}
 }
 
 @media screen and (max-width: 768px) {

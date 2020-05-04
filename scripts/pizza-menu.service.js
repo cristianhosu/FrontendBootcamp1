@@ -3,4 +3,16 @@ async function getMenuItems() {
 	return response.json();
 }
 
-export { getMenuItems };
+async function saveMenuItem(pizza) {
+	const requestOptions = {
+		method: 'POST',
+		headers: {
+			'Content-Type': 'application/json',
+		},
+		body: JSON.stringify(pizza),
+	};
+	const response = await fetch('http://localhost:3000/menu', requestOptions);
+	return response.json();
+}
+
+export { getMenuItems, saveMenuItem };
