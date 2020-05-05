@@ -13,14 +13,9 @@ function bindPizzaMenu(data) {
 	const parentElement = document.querySelector('.pizza-menu');
 	parentElement.innerHTML = '';
 	data.forEach((pizza) => {
-		let templateHtml = template.innerHTML;
-		templateHtml = templateHtml.replace('{{ name }}', pizza.name);
-		templateHtml = templateHtml.replace('{{ description }}', pizza.description);
-		templateHtml = templateHtml.replace('{{ price }}', pizza.price);
-
-		const templateElement = document.createElement('template');
-		templateElement.innerHTML = templateHtml.trim();
-		parentElement.appendChild(templateElement.content.firstChild);
+		const menuItem = document.createElement('menu-item');
+		menuItem.data = pizza;
+		parentElement.appendChild(menuItem);
 	});
 }
 

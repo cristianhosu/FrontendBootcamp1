@@ -87,6 +87,116 @@ body .container .pizza-menu .menu-item > img {
   width: 150px;
 }
 
+body .dialog {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: left 0.5s ease-in-out;
+  transition: left 0.5s ease-in-out;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+body .dialog.hidden {
+  position: relative;
+  left: -100vw;
+}
+
+body .dialog .title {
+  background-color: #282828;
+  color: #ececec;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 0 20px 20px;
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+body .dialog .body {
+  background-color: #cdcdcd;
+  color: #2a2a2a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px;
+  font-size: 2rem;
+  line-height: 2.5rem;
+}
+
+body .dialog .body .field {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .dialog .body .field label {
+  line-height: 1.5rem;
+  font-size: 1.3rem;
+}
+
+body .dialog .body .field input {
+  line-height: 1.5rem;
+  font-size: 1.3rem;
+  padding: 5px 10px 5px 10px;
+  background-color: none;
+  border-radius: 6px;
+}
+
+body .dialog .actions {
+  background-color: #282828;
+  font-size: 1.7rem;
+  line-height: 2rem;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+body button {
+  background-color: none;
+  border: none;
+  font-size: 1rem;
+  padding: 5px 20px;
+  border-radius: 4px;
+  font: inherit;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+body button.green {
+  background-color: #2aaa2a;
+}
+
+body button.flat {
+  background-color: #dcdcdc;
+}
+
 @media screen and (max-width: 768px) {
   :root {
     --container-width: 100vw;
